@@ -1,0 +1,6 @@
+test_data_dir = r'/home/lusuon/test_data/robot'
+openSfM_bin_dir = r'/home/lusuon/OpenSfM/bin/opensfm_run_all'
+test_data_obj = test_data_dir + r'/robot.obj'
+test_data_ply = test_data_dir + r'/undistorted/depthmaps/merged.ply'
+# shapenet_data_dir = r'/home/lusuon/shapenet'
+# openSfM_bin_dir = r'/home/lusuon/OpenSfM/bin/opensfm export_ply'
