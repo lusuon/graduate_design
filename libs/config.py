@@ -1,6 +1,9 @@
-test_data_dir = r'/home/lusuon/test_data/robot'
 openSfM_bin_dir = r'/home/lusuon/OpenSfM/bin/opensfm_run_all'
-test_data_obj = test_data_dir + r'/robot.obj'
-test_data_ply = test_data_dir + r'/undistorted/depthmaps/merged.ply'
-# shapenet_data_dir = r'/home/lusuon/shapenet'
+data_for_sfm_dir = r'static/uploads/data_for_sfm'
+full_result_dir = r'static/uploads/data_for_sfm/'
+res_view_path = r'static/res_view.png'
+upload_dir = r'static/uploads/data_for_sfm/images'
+meshrcnn_input_path = r'{}/upload.jpg'.format(upload_dir)
+meshrcnn_output_path = r'static/meshrcnn_output/' # with detect res and recon res
+sfm_output_path = r'static/uploads/data_for_sfm/undistorted/depthmaps/merged.ply'
 # openSfM_bin_dir = r'/home/lusuon/OpenSfM/bin/opensfm export_ply'

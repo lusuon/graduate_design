@@ -1,6 +1,6 @@
 <!doctype html>
-<title>Python Flask Upload Multiple Images and Display them</title>
-<h2>Select multiple images to upload and display</h2>
+<title>Children block scoring system</title>
+<h2>Select image(s) to display score and help infomation</h2>
 <p>
 	{% with messages = get_flashed_messages() %}
 	  {% if messages %}
@@ -18,17 +18,39 @@
 		<p>
 			<input type="file" name="files[]" multiple="true" autocomplete="off" required>
 		</p>
+		<p>
+			<input type="radio" name="recon_method" value="fast" id="fast">fast<br>
+			<input type="radio" name="recon_method" value="precise" id="precise">precise<br>
+		</p>
     </dl>
     <p>
 		<input type="submit" value="Submit">
 	</p>
 </form>
-
-{% if filenames %}
-	{% for filename in filenames %}
-		<div>
-			<img src="{{ url_for('display_image', filename=filename) }}">
-		</div>
-        {{ UPLOAD_FOLDER }}
-	{% endfor %}
+{# 
+{% if result %}
+	{{'result:'}}
+	<div>
+		<img src="{{ url_for('static', filename=result) }}">
+	</div>
 {% endif %}
+#}
+
+<div>
+	<h5>Target:</h5>
+	<img src="{{ url_for('display_target') }}" style="width:500px;height:600px;">
+	{% if result_score != None %}
+		{% for filename in filenames %}
+		<div>
+			<h5>You uploaded(only show one):</h5>
+			<img src="{{ url_for('display_meshrcnn_res')}}" style="width:500px;height:600px;">
+		</div>
+		{% endfor %}
+		<div>
+			<h5>MSE score(lower means better / more similar):</h5>
+			{{result_score}}
+			<h5>percentage of points in threshold:</h5>
+			{{result_percentage}}
+		</div>
+	{% endif %}
+</div>

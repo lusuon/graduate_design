@@ -1,6 +1,7 @@
 from flask import Flask
+from libs.config import upload_dir
 
-UPLOAD_FOLDER = 'static/uploads/data_for_sfm/images'
+UPLOAD_FOLDER = upload_dir
 
 app = Flask(__name__)
 app.secret_key = "secret key"
