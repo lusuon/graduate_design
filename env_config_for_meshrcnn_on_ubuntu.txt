@@ -1,0 +1,14 @@
+conda create -n test python=3.8
+conda activate test
+
+conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch
+conda install -c conda-forge -c fvcore fvcore
+pip install pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py38_cu101_pyt171/download.html
+
+python -m pip install detectron2 -f \
+  https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.7/index.html
+
+pip install scipy
+pip install opencv-python
+
+ 
